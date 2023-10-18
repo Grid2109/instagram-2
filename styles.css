@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  main {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+  }
+  
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px 0 16px;
+    position: relative;
+  }
+  
+  input {
+    background-color: #fafafa;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    margin-top: 6px;
+    padding: 9px 5px 7px 8px;
+    font-size: 12px;
+    max-width: 268px;
+    width: 100%;
+    height: 38px;
+    font-weight: normal;
+  }
+  
+  input:focus {
+    border: 1px solid rgb(219, 219, 219); /* Mantém a borda transparente quando em foco */
+    outline: none; /* Remove o contorno padrão do navegador */
+  }
+  
+  button {
+    background-color: #0095f6;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    color: #ffffff;
+    margin: 14px 40px 8px 40px;
+    cursor: pointer;
+    max-width: 268px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 12px;
+  }
+  
+  span {
+    color: #737373;
+    font-size: 12px;
+  }
+  
+  .container-article {
+    display: flex; /* Ativa o flexbox no elemento pai */
+    justify-content: center; /* Centralize verticalmente os filhos */
+    align-items: center;  
+    text-align: center;
+    width: 100%;
+    padding-bottom: 32px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+    flex-grow: 1;
+}
+  
+  
+  .container-imagens {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+  }
+  
+  .img-celular {
+    max-width: 450px;
+    width: 100%;
+  }
+  
+  .img-insta {
+    height: 520px;
+    position: absolute;
+    left: 153px;
+    top: 26px;
+    opacity: 0.5;
+    transition: 2s ease-in-out;
+  }
+  
+  .container-insta {
+    display: inline-block; /* Isso ajuda a garantir que ambos ocupem a mesma linha */
+    max-width: 350px;
+    width: 100%;
+  }
+
+  .container-form {
+    box-sizing: border-box;
+    border: 1px solid #d3d3d3;
+    height: 401.99px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+  }
+  
+  .logo-instagram {
+    width: 180px;
+    margin-top: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .linha-ou {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase; /*Essa regra específica faz com que todo o texto dentro desse elemento seja exibido em letras maiúsculas (caixa alta).*/
+    margin: 10px 40px 23px;
+    color: rgb(115, 115, 115);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .linha-ou::before,
+  .linha-ou::after {
+    content: "";
+    width: 106px;
+    height: 1px;
+    background-color: #dbdbdb; /* Cor da linha */
+    flex-grow: 1;
+    margin: 0 10px;
+  }
+  
+  .icone-face {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+  
+  .facebook {
+    color: #385185;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 8px 40px;
+  }
+  
+  .esqueceu-senha {
+    display: block;
+    color: #385185;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .container-signUp {
+    box-sizing: border-box;
+    border: 1px solid #d3d3d3;
+    height: 63px;
+    font-size: 14px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+  }
+  
+  .cadastro {
+    color: #0095f6;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .container-apps {
+    cursor: pointer;
+  }
+  .obter-app {
+    margin-top: 23px;
+    margin-bottom: 16px;
+  }
+  
+  .img-apps {
+    margin: 12px 0 26px 0;
+  }
+  
+  .play-store {
+    max-width: 134.28px;
+    width: 100%;
+    height: 40px;
+    margin-right: 5px;
+  }
+  
+  .microsoft {
+    max-width: 110.77px;
+    height: 40px;
+    width: 100%;
+  }
+  
+  .div-footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 46px;
+    width: 100%;
+   
+  }
+  
+  .links-footer {
+    display: flex;
+    margin-top: 24px;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    width: 100%;
+  }
+  
+  .links {
+    display: flex;
+    margin: 0 8px 12px 8px;
+    color: #737373;
+    line-height: 9px;
+  }
+  
+  
+  
+  .copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .select {
+    color: #737373;
+    font-size: 12px;
+    cursor: pointer; /* Mostra um cursor de seleção */
+    border: none;
+    margin-right: 12px;
+    padding: 2px;
+  }
+  
+  .select:focus {
+    border: 1px solid transparent; /* Mantém a borda transparente quando em foco */
+    outline: none; /* Remove o contorno padrão do navegador */
+  }
+
+  
+  @media screen and (max-width: 430px){
+    section {
+      border: 1px #d3d3d3;
+    }
+
+    .container-form {
+      border: none;
+      position: relative;
+    }
+
+    .logo-instagram {
+      margin-top: 95px;
+    }
+
+    .paragrafo-oculto {
+      font-size: 24px;
+      margin-top: 5px;
+      margin-left: 30px;
+      margin-right: 27px;
+    }
+
+    .destacar-fotos {
+      font-size: 24px;
+      color: rgb(255, 30, 0);
+    }
+
+    .destacar-videos {
+      font-size: 24px;
+      color: rgb(226, 22, 90);
+     
+    }
+
+    .primeiro-botao {
+      display: none;
+    }
+
+    .botao-oculto {
+     font-size: 14px;
+     height: 45px;
+     margin: 30px auto 20px auto;
+     font-weight: normal;
+     max-width: 272px;
+     width: 100%;
+    }
+
+    .paragrafo-oculto-login {
+        font-size: 16px;
+        color: #737373;
+        margin: 0;
+    }
+
+    .span-login {
+      font-size: 16px;
+      color: #0095f6;
+    }
+
+    .paragrafo-oculto-from {
+      font-size: 13px;
+      color: #868484;
+      font-weight: normal;
+      margin-top: 180px;
+      text-align: center;
+    }
+
+    .meta-insta {
+      width: 70px;
+    }
+
+     input {
+      display: none;
+    }
+
+    .linha-ou {
+      display: none;
+    }
+
+    .facebook {
+      display: none;
+    }
+
+    .esqueceu-senha {
+      display: none;
+    }
+
+    .container-signUp {
+      display: none;
+    }
+
+    .container-apps{
+      display: none;
+    }
+
+    .div-footer {
+      margin-top: 180px;
+      margin-bottom: 20px;
+    }
+
+   .select {
+    font-size: 12px;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 15px;
+    text-align: center;
+  }
+
+  .links  {
+    margin-top: 3px;
+   }
+
+   
+   .span-copy {
+    display: none;
+   }
+  }
+
+  @media screen and (min-width: 431px) {
+    .paragrafo-oculto {
+      display: none;
+    }
+
+    .botao-oculto {
+      display: none;
+    }
+    
+    .meta-insta {
+      display: none;
+    }
+
+    .span-login {
+      display: none;
+    }
+
+    .paragrafo-oculto-login {
+      display: none;
+    }
+
+    .paragrafo-oculto-from {
+      display: none;
+    }
+
+  }
+  
+  @media screen and (max-width: 320px){
+    
+    .botao-oculto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 14px;
+      height: 60px;
+      font-weight: normal;
+      max-width: 220px;
+      width: 100%;
+      padding: 20px 30px 20px 30px;
+  
+    }
+    
+  }
+
+  @media screen and (max-width: 875px){
+
+    .container-imagens {
+      display: none;
+    }
+  
+  }
